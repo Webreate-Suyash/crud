@@ -1,0 +1,58 @@
+//Sign Up
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+    "email": "suyashsinghal11@webreate.com",
+    "password": "Suyash@123",
+    "name": "suyash singhal",
+    "token": false
+}
+
+//login 
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "suyashsinghal@webreate.com",
+    "password": "Suyash@123"
+}
+
+
+//Get Users login details
+###
+Get http://localhost:5000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBpZCI6IjdhNjk1ZDM3LTJjZTAtNGY4Mi05Y2Y4LWVjYTg2MzIyNjNjMCIsImVtYWlsIjoic3V5YXNoc2luZ2hhbEB3ZWJyZWF0ZS5jb20iLCJpYXQiOjE2ODg1NDA5MjUsImV4cCI6MTY4ODYyNzMyNX0.cBgr3WZv1mrIKTKgMStXCltQgkPEKDHEyTUOw5uFLRs
+###
+GET http://localhost:5000/api/auth/refresh_token
+
+
+//Punch In
+
+###
+PUT http://localhost:5000/api/auth/PunchIn
+
+
+
+//Break_in
+###
+PUT http://localhost:5000/api/auth/BreakIn
+
+
+//Break_out
+
+###
+PUT http://localhost:5000/api/auth/BreakOut
+
+
+
+//Punch Out
+###
+PUT http://localhost:5000/api/auth/PunchOut
+
+
+
+//logout
+###
+DELETE http://localhost:5000/api/auth/refresh_token
